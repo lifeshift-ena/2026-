@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ライフシフト第2期 |田舎で生きる。</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Noto+Serif+JP:wght@400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header Navigation -->
+    <nav
+        style="background-color: var(--accent-green); color: white; padding: 10px 0; position: fixed; width: 100%; top: 0; z-index: 1000; font-family: var(--font-sans);">
+        <div class="grid-wrap"
+            style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px;">
+            <div style="font-weight: bold; font-size: 0.9rem; letter-spacing: 0.1em;">
+                Life Shift ENA 2026 受講生募集
+            </div>
+            <div>
+                <a href="#apply"
+                    style="color: white; text-decoration: none; font-size: 0.8rem; border: 1px solid white; padding: 5px 15px; border-radius: 2px; transition: all 0.3s ease;">
+                    申し込みはコチラ
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-header reveal">
+        <div class="video-background">
+            <video autoplay muted loop playsinline id="hero-video">
+                <source src="images/hero-video.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+    </header>
+
+    <!-- Before Rural Life Section -->
+    <section style="background-color: #ffffff; padding: 100px 0;" class="reveal">
+        <div class="grid-wrap" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <div style="max-width: 800px; width: 100%;">
+                <!-- Logo first, and larger -->
+                <div class="img-frame" style="max-width: 800px; margin: 0 auto 60px auto; width: 100%;">
+                    <img src="images/top_logo.png" alt="LIFE SHIFT"
+                        style="max-width: 450px; height: auto; display: block; margin: 0 auto;">
+                </div>
+
+                <!-- Text group second -->
+                <div class="title-group"
+                    style="display: flex; flex-direction: column; align-items: center; margin-bottom: 20px;">
+                    <h2 class="jp-title" style="margin-bottom: 0.5rem; font-size: 2.4rem; color: var(--accent-green);">
+                        農ある暮らしのリアルデザイン</h2>
+                    <p style="font-size: 1.2rem; color: var(--text-main); font-weight: bold; margin-top: 0.5rem;">
+                        ～お米作りを軸に「田舎で生きる」を実践する半年講座～</p>
+                    <div class="line-accent" style="margin: 30px auto;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Reality Section 01 -->
+    <section style="background-color: #f9f9f9;" class="reveal">
+        <div class="grid-wrap">
+            <div style="grid-column: 1 / 7; padding-top: 40px;">
+                <div class="title-group">
+                    <span class="en-title">The Reality</span>
+                    <h2 class="jp-title">きれいごとじゃない。<br>田舎で暮らす・働く・関わる<br>「リアル」に触れる半年間。</h2>
+                    <div class="line-accent"></div>
+                </div>
+                <p style="margin-bottom: 1.5rem;">お米をつくる。
+                    地域の人とつながる。<br>小さななりわいを考える。<br>移住のお金の現実を知る。<br>田んぼを持つまでのプロセスを学ぶ。</p>
+                <p style="font-weight: bold;">農ある暮らしの原型（プロトタイプ）を、<br>中野方という“風の谷”でつくる半年間。</p>
+            </div>
+            <div style="grid-column: 8 / 13;">
+                <div class="img-frame">
+                    <div class="img-placeholder" style="aspect-ratio: 1/1;">[IMAGE_PLACEHOLDER: 03_Reality_画像_01]</div>
+                    <p class="img-caption">中野方での暮らしの実録</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reality Section 02 (Where Life Takes Root) -->
+    <section style="background-color: var(--bg);" class="reveal">
+        <div class="grid-wrap">
+            <div style="grid-column: 1 / 6;">
+                <div class="img-frame">
+                    <div class="img-placeholder" style="aspect-ratio: 1/1;">[IMAGE_PLACEHOLDER: 03_Reality_画像_02]</div>
+                    <p class="img-caption">中野方、風の谷の风景</p>
+                </div>
+            </div>
+            <div style="grid-column: 7 / 13; padding-top: 40px;">
+                <div class="title-group">
+                    <span class="en-title">Where Life Takes Root</span>
+                    <h2 class="jp-title">風の谷で、<br>暮らしの原型をつくる</h2>
+                    <div class="line-accent"></div>
+                </div>
+                <p style="margin-bottom: 2rem;">
+                    中野方は、空き家が多いわけでも、便利な町でもありません。<br>けれど、人のつながりが濃く、暮らしの技が今も息づき、<br>“遊び”が生きる力へと変わる谷です。</p>
+                <p style="font-weight: bold;">
+                    「農 × 暮らし × なりわい × 地域の未来」を<br>まるごと体験しながら、<br>田舎で生きるための“自分だけの暮らしの原型”を<br>半年かけて耕す講座をつくりました。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual Message Section (Full Screen Image / Before You Choose Rural Life) -->
+    <section class="full-screen-visual reveal">
+        <div class="overlay"></div>
+        <div class="visual-content"
+            style="width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 0 20px;">
+            <div style="max-width: 800px; width: 100%;">
+                <div class="title-group"
+                    style="margin-bottom: 1.5rem; display: flex; flex-direction: column; align-items: center;">
+                    <span class="en-title" style="color: rgba(255,255,255,0.8); margin-bottom: 0.5rem;">Before You
+                        Choose Rural Life</span>
+                    <h2 class="jp-title"
+                        style="color: white; border-bottom: none; font-size: 2.2rem; margin-bottom: 0.5rem;">
+                        田舎で生きる。その前に知っておきたいこと。</h2>
+                    <div class="line-accent" style="background-color: white; margin: 0.5rem auto;"></div>
+                </div>
+                <div class="visual-text-body" style="color: white; line-height: 1.8; font-size: 1.1rem;">
+                    <p style="margin-bottom: 0.8rem; text-align: center;">田舎は、自然が豊かで人があたたかい場所。<br>でもそれだけでは、暮らしは続きません。
+                    </p>
+
+                    <p style="margin-bottom: 0.8rem; text-align: center;">仕事はどうする？<br>収入は？<br>ご近所との距離感は？<br>自分は何で生きていく？
+                    </p>
+
+                    <p style="margin-bottom: 0.8rem; text-align: center;">憧れの前に、現実を知ること。<br>そして、“覚悟”ではなく“納得”で選ぶこと。</p>
+
+                    <p
+                        style="font-size: 1.2rem; font-family: var(--font-serif); text-align: center; margin-top: 1.5rem;">
+                        この講座は、<br>理想だけでなく、<br>田舎で生きるための土台を体感する時間です。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You Will Gain Section (Horizontal Scroll) -->
+    <section class="reveal" style="overflow: hidden; padding-bottom: 120px;">
+        <div class="grid-wrap">
+            <div style="grid-column: 1 / 13; margin-bottom: 60px;">
+                <div class="title-group">
+                    <span class="en-title">What You Will Gain</span>
+                    <h2 class="jp-title">この講座で得られること</h2>
+                    <div class="line-accent"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="horizontal-scroll-wrapper">
+            <!-- Gain 01 -->
+            <div class="gain-card">
+                <div class="img-frame">
+                    <div class="img-placeholder" style="aspect-ratio: 16/9;">[IMAGE_PLACEHOLDER: Gain_01_お米づくり]</div>
+                </div>
+                <h3><span class="number">01</span>お米づくりのリアルを体験する</h3>
+                <p></p>
+            </div>
+
+            <!-- Gain 02 -->
+            <div class="gain-card">
+                <div class="img-frame">
+                    <div class="img-placeholder" style="aspect-ratio: 16/9;">[IMAGE_PLACEHOLDER: Gain_02_お金のリアル]</div>
+                </div>
+                <h3><span class="number">02</span>田舎で暮らすための“お金のリアル”がわかる</h3>
+                <p></p>
+            </div>
+
+            <!-- Gain 03 -->
+            <div class="gain-card">
+                <div class="img-frame">
+                    <div class="img-placeholder" style="aspect-ratio: 16/9;">[IMAGE_PLACEHOLDER: Gain_03_田んぼ取得]</div>
+                </div>
+                <h3><span class="number">03</span>田んぼの取得方法がわかる</h3>
+                <p></p>
+            </div>
+
+            <!-- Gain 04 -->
+            <div class="gain-card">
+                <div class="img-frame">
+                    <div class="img-placeholder" style="aspect-ratio: 16/9;">[IMAGE_PLACEHOLDER: Gain_04_なりわいの種]</div>
+                </div>
+                <h3><span class="number">04</span>小さななりわいの種が見つかる</h3>
+                <p></p>
+            </div>
+
+            <!-- Gain 05 -->
+            <div class="gain-card">
+                <div class="img-frame">
+                    <div class="img-placeholder" style="aspect-ratio: 16/9;">[IMAGE_PLACEHOLDER: Gain_05_つながり]</div>
+                </div>
+                <h3><span class="number">05</span>地域とのつながりが自然に生まれる</h3>
+                <p></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curriculum Section -->
+    <section class="reveal" style="padding-top: 100px;">
+        <div class="grid-wrap">
+            <div style="grid-column: 1 / 13; margin-bottom: 80px;">
+                <div class="title-group">
+                    <span class="en-title">Curriculum</span>
+                    <h2 class="jp-title">講座内容（全5回）</h2>
+                    <div class="line-accent"></div>
+                </div>
+            </div>
+
+            <!-- Step 01: テキスト左 / 画像右 -->
+            <div style="grid-column: 1 / 6; margin-bottom: 100px;">
+                <div class="step-label"
+                    style="font-family: var(--font-serif); font-size: 0.8rem; color: var(--accent-green); margin-bottom: 1rem; letter-spacing: 0.2em;">
+                    PHASE 01</div>
+                <h3 style="font-size: 1.4rem; margin-bottom: 1.5rem;">第1回｜田植え × 農ある暮らしの言語化</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 0.8rem; display: flex; align-items: baseline; gap: 10px;"><span
+                            style="color: var(--accent-green);">●</span> 田植え体験</li>
+                    <li style="margin-bottom: 0.8rem; display: flex; align-items: baseline; gap: 10px;"><span
+                            style="color: var(--accent-green);">●</span> 年間サイクル理解</li>
+                    <li style="margin-bottom: 0.8rem; display: flex; align-items: baseline; gap: 10px;"><span
+                            style="color: var(--accent-green);">●</span> 農ある暮らしの夢を言語化</li>
+                    <li style="margin-bottom: 0.8rem; display: flex; align-items: baseline; gap: 10px;"><span
+                            style="color: var(--accent-green);">●</span> 移住にかかる生活費・初期費用のリアル</li>
+                </ul>
+            </div>
+            <div style="grid-column: 7 / 13; margin-bottom: 100px;">
+                <div class="img-frame">
+                    <div class="img-placeholder" style="aspect-ratio: 4/3;">[IMAGE_PLACEHOLDER: Curriculum_01_田植え]</div>
+                </div>
+            </div>
+
+            <!-- Step 02: 画像左 / テキスト右 -->
+            <div style="grid-column: 1 / 7; margin-bottom: 100px;">
+                <div class="img-frame">
+                    <div class="img-placeholder" style="aspect-ratio: 4/3;">[IMAGE_PLACEHOLDER: Curriculum_02_草取り]</div>
+                </div>
+            </div>
+            <div style="grid-column: 8 / 13; margin-bottom: 100px;">
+                <div class="step-label"
+                    style="font-family: var(--font-serif); font-size: 0.8rem; color: var(--accent-green); margin-bottom: 1rem; letter-spacing: 0.2em;">
+                    PHASE 02</div>
+                <h3 style="font-size: 1.6rem; margin-bottom: 1.5rem;">第2回｜草取り × 労力とコストの現実</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 0.8rem; display: flex; align-items: baseline; gap: 10px;"><span
+                            style="color: var(--accent-green);">●</span> 草取り作業</li>
+                    <li style="margin-bottom: 0.8rem; display: flex; align-items: baseline; gap: 10px;"><span
+                            style="color: var(--accent-green);">●</span> 農の時間と労力、コストの実際のところ</li>
+                    <li style="margin-bottom: 0.8rem; display: flex; align-items: baseline; gap: 10px;"><span
+                            style="color: var(--accent-green);">●</span> 先輩移住者との交流</li>
+                    <li style="margin-bottom: 0.8rem; display: flex; align-items: baseline; gap: 10px;"><span
+                            style="color: var(--accent-green);">●</span> 田んぼ取得のリアル（農地法・地主との関係）</li>
+                </ul>
+            </div>
+
+            <!-- Step 03: テキスト左 / 画像右 -->
+            <div style="grid-column: 1 / 6; margin-bottom: 100px;">
+                <div class="step-label"
+                    style="font-family: var(--font-serif); font-size: 0.8rem; color: var(--accent-green); margin-bottom: 1rem; letter-spacing: 0.2em;">
+                    PHASE 03</div>
+                <h3 style="font-size: 1.6rem; margin-bottom: 1.5rem;">第3回｜稲刈り × 暮らしのデザイン</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 0.8rem; display: flex; align-items: baseline; gap: 10px;"><span
+                            style="color: var(--accent-green);">●</span> 稲刈り体験</li>
+                    <li style="margin-bottom: 0.8rem; display: flex; align-items: baseline; gap: 10px;"><span
+                            style="color: var(--accent-green);">●</span> 農機具のリアル</li>
+                    <li style="margin-bottom: 0.8rem; display: flex; align-items: baseline; gap: 10px;"><span
+                            style="color: var(--accent-green);">●</span> 先輩移住者訪問</li>
+                    <li style="margin-bottom: 0.8rem; display: flex; align-items: baseline; gap: 10px;"><span
+                            style="color: var(--accent-green);">●</span> 複業モデル紹介</li>
+                </ul>
+            </div>
+            <div style="grid-column: 7 / 13; margin-bottom: 100px;">
+                <div class="img-frame">
+                    <div class="img-placeholder" style="aspect-ratio: 4/3;">[IMAGE_PLACEHOLDER: Curriculum_03_稲刈り]</div>
+                </div>
+            </div>
+
+            <!-- Step 04: 画像左 / テキスト右 -->
+            <div style="grid-column: 1 / 7; margin-bottom: 100px;">
+                <div class="img-frame">
+                    <div class="img-placeholder" style="aspect-ratio: 4/3;">[IMAGE_PLACEHOLDER: Curriculum_04_収穫祭]</div>
+                </div>
+            </div>
+            <div style="grid-column: 8 / 13; margin-bottom: 100px;">
+                <div class="step-label"
+                    style="font-family: var(--font-serif); font-size: 0.8rem; color: var(--accent-green); margin-bottom: 1rem; letter-spacing: 0.2em;">
+                    PHASE 04</div>
+                <h3 style="font-size: 1.6rem; margin-bottom: 0.5rem;">第4回｜収穫祭 × なりわい講座</h3>
+                <p
+                    style="font-family: var(--font-serif); font-size: 0.9rem; color: var(--text-sub); margin-bottom: 1.5rem;">
+                    講師：伊藤 洋志さん</p>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 0.8rem; display: flex; align-items: baseline; gap: 10px;"><span
+                            style="color: var(--accent-green);">●</span> お米を味わう会</li>
+                    <li style="margin-bottom: 0.8rem; display: flex; align-items: baseline; gap: 10px;"><span
+                            style="color: var(--accent-green);">●</span> 小商いのつくり方</li>
+                    <li style="margin-bottom: 0.8rem; display: flex; align-items: baseline; gap: 10px;"><span
+                            style="color: var(--accent-green);">●</span> 田舎での仕事づくりの現実</li>
+                </ul>
+            </div>
+
+            <!-- Step 05: テキスト左 / 画像右 -->
+            <div style="grid-column: 1 / 6; margin-bottom: 100px;">
+                <div class="step-label"
+                    style="font-family: var(--font-serif); font-size: 0.8rem; color: var(--accent-green); margin-bottom: 1rem; letter-spacing: 0.2em;">
+                    PHASE 05</div>
+                <h3 style="font-size: 1.6rem; margin-bottom: 1.5rem;">第5回｜実装計画</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 0.8rem; display: flex; align-items: baseline; gap: 10px;"><span
+                            style="color: var(--accent-green);">●</span> 暮らしの可視化（プロトタイプ発表）</li>
+                    <li style="margin-bottom: 0.8rem; display: flex; align-items: baseline; gap: 10px;"><span
+                            style="color: var(--accent-green);">●</span> わら技術体験</li>
+                    <li style="margin-bottom: 0.8rem; display: flex; align-items: baseline; gap: 10px;"><span
+                            style="color: var(--accent-green);">●</span> 自分の移住ロードマップ作成</li>
+                </ul>
+            </div>
+            <div style="grid-column: 7 / 13; margin-bottom: 100px;">
+                <div class="img-frame">
+                    <div class="img-placeholder" style="aspect-ratio: 4/3;">[IMAGE_PLACEHOLDER: Curriculum_05_実装計画]
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Target Audience Section -->
+    <section class="reveal" style="padding-top: 120px; padding-bottom: 120px; background-color: #ffffff;">
+        <div class="grid-wrap">
+            <div style="grid-column: 1 / 13; margin-bottom: 30px;">
+                <div class="title-group"
+                    style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-bottom: 0;">
+                    <span class="en-title">For Those Considering Rural Life</span>
+                    <h2 class="jp-title">田舎で生きる可能性を感じている方へ</h2>
+                    <div class="line-accent" style="margin-left: auto; margin-right: auto;"></div>
+                </div>
+            </div>
+
+            <div style="grid-column: 1 / 13; text-align: center;">
+                <ul class="target-list"
+                    style="list-style: none; padding: 0; margin-bottom: 3rem; display: inline-block; text-align: left;">
+                    <li
+                        style="margin-bottom: 1.2rem; display: flex; align-items: baseline; gap: 15px; font-size: 1.1rem;">
+                        <span style="color: var(--accent-green);">●</span>
+                        <span>いつかは地方で暮らしてみたいと思っている</span>
+                    </li>
+                    <li
+                        style="margin-bottom: 1.2rem; display: flex; align-items: baseline; gap: 15px; font-size: 1.1rem;">
+                        <span style="color: var(--accent-green);">●</span>
+                        <span>農のある暮らしに憧れがある</span>
+                    </li>
+                    <li
+                        style="margin-bottom: 1.2rem; display: flex; align-items: baseline; gap: 15px; font-size: 1.1rem;">
+                        <span style="color: var(--accent-green);">●</span>
+                        <span>将来的にお米を自給したいと考えている人</span>
+                    </li>
+                    <li
+                        style="margin-bottom: 1.2rem; display: flex; align-items: baseline; gap: 15px; font-size: 1.1rem;">
+                        <span style="color: var(--accent-green);">●</span>
+                        <span>今の働き方や生き方を見直したい</span>
+                    </li>
+                    <li
+                        style="margin-bottom: 1.2rem; display: flex; align-items: baseline; gap: 15px; font-size: 1.1rem;">
+                        <span style="color: var(--accent-green);">●</span>
+                        <span>移住に興味はあるが、何から始めればいいか分からない</span>
+                    </li>
+                    <li
+                        style="margin-bottom: 1.2rem; display: flex; align-items: baseline; gap: 15px; font-size: 1.1rem;">
+                        <span style="color: var(--accent-green);">●</span>
+                        <span>理想だけでなく、現実もきちんと知りたい</span>
+                    </li>
+                </ul>
+                <p style="font-size: 1.3rem; line-height: 1.8; font-family: var(--font-serif); text-align: center;">
+                    そんな方のための講座です。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Details Section (Full Screen Visual Style) -->
+    <section class="full-screen-visual reveal"
+        style="background-color: #3b4a3e; min-height: 100vh; height: auto; padding: 100px 0;">
+        <div class="overlay" style="background: rgba(0, 0, 0, 0.5);"></div>
+        <div class="visual-content"
+            style="width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 0 20px;">
+            <div style="max-width: 900px; width: 100%;">
+                <div class="title-group"
+                    style="margin-bottom: 2.5rem; display: flex; flex-direction: column; align-items: center;">
+                    <span class="en-title" style="color: rgba(255,255,255,0.8); margin-bottom: 0.5rem;">Application
+                        Details</span>
+                    <h2 class="jp-title"
+                        style="color: white; border-bottom: none; font-size: 2.2rem; margin-bottom: 0.5rem;">募集要項</h2>
+                    <div class="line-accent" style="background-color: white; margin: 0 auto;"></div>
+                </div>
+
+                <div class="visual-text-body" style="color: white; line-height: 1.8; text-align: center;">
+                    <div
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-bottom: 3rem; text-align: center;">
+                        <div>
+                            <h3
+                                style="font-size: 0.9rem; color: rgba(255,255,255,0.7); letter-spacing: 0.2em; margin-bottom: 0.5rem;">
+                                募集人数</h3>
+                            <p style="font-size: 1.2rem; font-weight: bold;">10名程度（少人数制）</p>
+                        </div>
+                        <div>
+                            <h3
+                                style="font-size: 0.9rem; color: rgba(255,255,255,0.7); letter-spacing: 0.2em; margin-bottom: 0.5rem;">
+                                募集期間</h3>
+                            <p style="font-size: 1.2rem; font-weight: bold;">3月〜4月</p>
+                        </div>
+                        <div>
+                            <h3
+                                style="font-size: 0.9rem; color: rgba(255,255,255,0.7); letter-spacing: 0.2em; margin-bottom: 0.5rem;">
+                                講座スタート</h3>
+                            <p style="font-size: 1.2rem; font-weight: bold;">5月（田植えから始まります）</p>
+                        </div>
+                        <div>
+                            <h3
+                                style="font-size: 0.9rem; color: rgba(255,255,255,0.7); letter-spacing: 0.2em; margin-bottom: 0.5rem;">
+                                参加費</h3>
+                            <p style="font-size: 1.1rem; font-weight: bold; margin-bottom: 0.3rem;">通し参加 10,000円</p>
+                            <p style="font-size: 0.9rem; margin-bottom: 0.5rem; color: rgba(255,255,255,0.9);">小学生以下無料 /
+                                単発参加 3,000円</p>
+                            <p style="font-size: 0.8rem; color: rgba(255,255,255,0.6);">※補助金活用予定のため、実費相当のご負担となります。</p>
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 3rem; text-align: center;">
+                        <h3
+                            style="font-size: 0.9rem; color: rgba(255,255,255,0.7); letter-spacing: 0.2em; margin-bottom: 1rem;">
+                            参加条件</h3>
+                        <p style="font-size: 1.1rem; margin-bottom: 0.5rem;">全5回のうち、4回以上参加できる方</p>
+                        <p style="font-size: 0.85rem; color: rgba(255,255,255,0.7);">※継続して関わることで、学びと気づきが深まります。</p>
+                    </div>
+
+                    <div style="border-top: 1px solid rgba(255,255,255,0.2); padding-top: 2rem; text-align: center;">
+                        <h3
+                            style="font-size: 0.9rem; color: rgba(255,255,255,0.7); letter-spacing: 0.2em; margin-bottom: 1rem;">
+                            開催概要</h3>
+                        <p style="font-size: 1.1rem; font-weight: bold; margin-bottom: 1rem;">全5回連続講座</p>
+                        <p style="font-size: 1rem; line-height: 1.8; max-width: 700px; margin: 0 auto;">
+                            田植え体験を起点に、「農 × 暮らし × なりわい × 地域の未来」を体感しながら、<br>
+                            自分なりの“田舎で生きる原型”を描いていきます。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA / Form Section -->
+    <section id="contact" class="cta-area reveal" style="background-color: #ffffff; padding: 120px 0;">
+        <div style="width: 100%; max-width: 1200px; margin: 0 auto; text-align: center;">
+            <!-- Header Text: Center Aligned -->
+            <div class="title-group" style="margin-bottom: 40px;">
+                <span class="en-title"
+                    style="color: var(--accent-green); display: block; margin-bottom: 5px; letter-spacing: 0.2em; font-size: 1.2rem;">JOIN
+                    US</span>
+                <span
+                    style="display: block; font-family: var(--font-serif); font-size: 1.5rem; color: var(--text-main); margin-bottom: 10px;">さぁ一歩を、ここから。</span>
+                <div
+                    style="font-size: 1.2rem; color: var(--text-sub); line-height: 1.6; margin: 0 auto; display: inline-block; text-align: center; font-family: var(--font-serif);">
+                    迷っている今が、きっとはじまりです。<br>
+                    まずは一歩、田んぼに立つところから。
+                </div>
+            </div>
+
+            <!-- Form: 2/3 Width of Screen (approx) -->
+            <div class="contact-form-container" style="text-align: left; width: 66.6%; margin: 0 auto;">
+                <form id="application-form" action="#" method="POST">
+                    <div class="form-group" style="margin-bottom: 40px;">
+                        <label
+                            style="display: block; margin-bottom: 12px; font-weight: bold; font-family: var(--font-serif); color: var(--text-sub); font-size: 0.9rem;">お名前
+                            <span style="color: #e74c3c;">*</span></label>
+                        <input type="text" name="name" placeholder="山田 太郎" required
+                            style="width: 100%; padding: 12px 0; border: none; border-bottom: 1px solid var(--border-thin); background: transparent; font-family: var(--font-serif); font-size: 1.1rem; outline: none;">
+                    </div>
+
+                    <div class="form-group" style="margin-bottom: 40px;">
+                        <label
+                            style="display: block; margin-bottom: 12px; font-weight: bold; font-family: var(--font-serif); color: var(--text-sub); font-size: 0.9rem;">メールアドレス
+                            <span style="color: #e74c3c;">*</span></label>
+                        <input type="email" name="email" placeholder="example@mail.com" required
+                            style="width: 100%; padding: 12px 0; border: none; border-bottom: 1px solid var(--border-thin); background: transparent; font-family: var(--font-serif); font-size: 1.1rem; outline: none;">
+                    </div>
+
+                    <div class="form-group" style="margin-bottom: 40px;">
+                        <label
+                            style="display: block; margin-bottom: 12px; font-weight: bold; font-family: var(--font-serif); color: var(--text-sub); font-size: 0.9rem;">件名</label>
+                        <input type="text" name="subject" placeholder="商品について"
+                            style="width: 100%; padding: 12px 0; border: none; border-bottom: 1px solid var(--border-thin); background: transparent; font-family: var(--font-serif); font-size: 1.1rem; outline: none;">
+                    </div>
+
+                    <div class="form-group" style="margin-bottom: 60px;">
+                        <label
+                            style="display: block; margin-bottom: 12px; font-weight: bold; font-family: var(--font-serif); color: var(--text-sub); font-size: 0.9rem;">お問い合わせ内容
+                            <span style="color: #e74c3c;">*</span></label>
+                        <textarea name="message" placeholder="自由にご記入ください" required
+                            style="width: 100%; padding: 12px 0; border: none; border-bottom: 1px solid var(--border-thin); background: transparent; font-family: var(--font-serif); font-size: 1.1rem; min-height: 150px; outline: none; resize: none; line-height: 1.6;"></textarea>
+                    </div>
+
+                    <!-- Button: 1/3 Width of Screen (approx) -->
+                    <div style="text-align: center;">
+                        <button type="submit" class="btn-itoshiro"
+                            style="background-color: var(--accent-green); color: white; border: none; width: 50%; padding: 20px 0; font-size: 1.1rem; cursor: pointer; transition: opacity 0.3s ease; border-radius: 0; display: inline-block;">
+                            この内容でお申込み/お問い合わせする
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Additional Contact Info: World-view consistent design -->
+                <div
+                    style="margin-top: 100px; text-align: center; border-top: 1px solid var(--border-thin); padding-top: 60px;">
+                    <h3
+                        style="font-family: var(--font-serif); font-size: 1.2rem; margin-bottom: 30px; letter-spacing: 0.1em; color: var(--text-main); font-weight: normal;">
+                        その他の問い合わせ方法</h3>
+                    <div
+                        style="font-family: var(--font-serif); font-size: 1rem; color: var(--text-main); line-height: 2.2; max-width: 800px; margin: 0 auto; text-align: center; padding: 0 20px;">
+                        <p style="font-size: 1.1rem; margin-bottom: 20px;">LifeShiftえな事務局（担当：長江・大江）
+                        </p>
+                        <p style="margin-bottom: 5px;"><span
+                                style="color: var(--accent-green); margin-right: 10px;">住所</span>
+                            〒509-8231　岐阜県恵那市中野方町1802-1</p>
+                        <p style="margin-bottom: 5px;"><span
+                                style="color: var(--accent-green); margin-right: 10px;">℡</span> <a
+                                href="tel:09091982383" style="color: inherit; text-decoration: none;">090-9198-2383</a>
+                        </p>
+                        <p style="margin-bottom: 5px;"><span
+                                style="color: var(--accent-green); margin-right: 10px;">HP</span> <a
+                                href="https://nakanoho-ena.com/" target="_blank"
+                                style="color: var(--accent-green); text-decoration: underline;">https://nakanoho-ena.com/</a>
+                        </p>
+                        <p style="margin-bottom: 5px;"><span
+                                style="color: var(--accent-green); margin-right: 10px;">✉</span> <a
+                                href="mailto:megumi_natural@yahoo.co.jp"
+                                style="color: inherit; text-decoration: none;">megumi_natural@yahoo.co.jp</a></p>
+                        <p style="margin-bottom: 5px;"><span
+                                style="color: var(--accent-green); margin-right: 10px;">Instagram</span> <a
+                                href="https://x.gd/UcHbZ" target="_blank"
+                                style="color: var(--accent-green); text-decoration: underline;">https://x.gd/UcHbZ</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="padding: 60px 0; border-top: 1px solid var(--border-thin);">
+        <div class="grid-wrap" style="display: block; text-align: center; font-size: 0.7rem; color: var(--text-sub);">
+            <p>&copy; 2026 Life Shift 2ndNakanoho Ena</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    } else {
+                        entry.target.classList.remove('is-visible');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+
+</body>
+
+</html>

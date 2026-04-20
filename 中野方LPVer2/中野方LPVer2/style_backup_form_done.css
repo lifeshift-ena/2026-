@@ -1,0 +1,641 @@
+:root {
+    /* いとしろカレッジを意識した繊細なパレット */
+    --bg: #FDFCF8;
+    /* 非常に明るい、温かみのある白 */
+    --text-main: #333333;
+    /* 墨色。純粋な黒を避ける */
+    --text-sub: #777777;
+    --accent-green: #4A8B82;
+    /* 非常に明るい、透明感のある緑 */
+    --accent-clay: #A67C52;
+    /* 土や木材を思わせる柔らかなブラウン */
+    --border-thin: rgba(0, 0, 0, 0.06);
+    --border-dark: rgba(0, 0, 0, 0.2);
+
+    /* タイポグラフィ：緻密な使い分け */
+    --font-serif: "Noto Serif JP", "Yu Mincho", serif;
+    --font-sans: "Noto Sans JP", "Helvetica Neue", Arial, sans-serif;
+
+    /* 余白とリズム */
+    --section-gap: 120px;
+    --inner-gap: 40px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text-main);
+    font-family: var(--font-sans);
+    /* 本文は緻密なサンセリフ */
+    line-height: 1.8;
+    letter-spacing: 0.04em;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 緻密な線の表現 */
+.line-accent {
+    height: 1px;
+    background-color: var(--border-dark);
+    width: 60px;
+    margin: 20px 0;
+}
+
+/* 見出しのデザイン：いとしろ風 */
+.title-group {
+    margin-bottom: 60px;
+}
+
+.en-title {
+    font-size: 0.7rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--text-sub);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.jp-title {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* レイアウト：重なりと奥行き */
+.grid-wrap {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+section {
+    padding: var(--section-gap) 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* カードと情報の緻密な整理 */
+.content-box {
+    background: white;
+    padding: 40px;
+    border: 1px solid var(--border-thin);
+    position: relative;
+}
+
+/* いとしろ風のカリキュラム表示 */
+.step-item {
+    display: flex;
+    gap: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--border-thin);
+    margin-bottom: 30px;
+}
+
+.step-number {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    color: var(--accent-clay);
+    opacity: 0.6;
+}
+
+/* CTA: 誠実で静かな主張 */
+.cta-area {
+    background-color: var(--accent-green);
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.btn-itoshiro {
+    display: inline-block;
+    padding: 20px 60px;
+    border: 1px solid white;
+    color: white;
+    text-decoration: none;
+    font-family: var(--font-serif);
+    transition: all 0.4s ease;
+}
+
+.btn-itoshiro:hover {
+    background-color: white;
+    color: var(--accent-green);
+}
+
+/* 画像：キャプションとの絶妙な配置 */
+.img-frame {
+    position: relative;
+}
+
+.img-placeholder {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+}
+
+.img-caption {
+    font-size: 0.75rem;
+    color: var(--text-sub);
+    margin-top: 10px;
+    text-align: right;
+}
+
+/* レスポンシブ */
+@media (max-width: 768px) {
+    .grid-wrap {
+        display: block;
+        padding: 0 20px;
+    }
+
+    .jp-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* Horizontal Scroll Section */
+.horizontal-scroll-wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 40px;
+    scroll-snap-type: x mandatory;
+    width: 100%;
+    scroll-padding: 0 40px;
+    /* スナップの余白 */
+}
+
+/* 開始位置を中央グリッドに合わせるためのスペーサー */
+.horizontal-scroll-wrapper::before {
+    content: '';
+    display: inline-block;
+    width: calc((100vw - min(1200px, 90vw)) / 2);
+    height: 1px;
+    vertical-align: top;
+}
+
+/* 最後の余白 */
+.horizontal-scroll-wrapper::after {
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 1px;
+    vertical-align: top;
+}
+
+@media (max-width: 1240px) {
+    .horizontal-scroll-wrapper::before {
+        width: 20px;
+    }
+}
+
+.horizontal-scroll-wrapper::-webkit-scrollbar {
+    height: 4px;
+}
+
+.horizontal-scroll-wrapper::-webkit-scrollbar-track {
+    background: #f0f0f0;
+}
+
+.horizontal-scroll-wrapper::-webkit-scrollbar-thumb {
+    background: var(--accent-green);
+}
+
+.gain-card {
+    display: inline-block;
+    width: 600px;
+    margin-right: 40px;
+    white-space: normal;
+    vertical-align: top;
+    scroll-snap-align: start;
+}
+
+@media (max-width: 768px) {
+    .gain-card {
+        width: 85vw;
+        margin-right: 20px;
+    }
+}
+
+.gain-card .img-frame {
+    margin-bottom: 30px;
+}
+
+.gain-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.gain-card .number {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    color: var(--accent-green);
+    opacity: 0.3;
+}
+
+/* Scroll Animation Styles */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Full Screen Visual Section */
+.full-screen-visual {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-image: url('images/reality_full_bg.jpg');
+    /* 背景画像がある場合はこちらを指定 */
+    background-color: #4a5d4e;
+    /* 画像がない場合のバックアップカラー */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* パララックス効果 */
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.full-screen-visual .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    /* 画像の上の暗幕 */
+    z-index: 1;
+}
+
+.full-screen-visual .visual-content {
+    position: relative;
+    z-index: 2;
+    text-align: left;
+    color: white;
+    width: 100%;
+}
+
+.visual-text-body {
+    max-width: 800px;
+}
+
+.visual-message {
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.visual-submessage {
+    font-size: 1.1rem;
+    letter-spacing: 0.1em;
+    opacity: 0.9;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .visual-message {
+        font-size: 1.8rem;
+    }
+
+    .visual-submessage {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .full-screen-visual {
+        height: auto;
+        padding: 80px 0;
+    }
+}
+
+/* ヒーローセクションの背景動画設定 */
+.hero-header {
+    position: relative;
+    padding-top: 44px;
+    text-align: center;
+    overflow: hidden;
+    min-height: 100vh;
+    /* 動画を大きく見せる */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    /* 少し白を乗せてテキストを読みやすく */
+}
+
+/* ヒーローセクションの内容を前面に */
+header.hero-header .logo-wrapper,
+header.hero-header .grid-wrap,
+header.hero-header .title-group,
+header.hero-header p {
+    position: relative;
+    z-index: 10;
+    background-color: transparent !important;
+}
+
+.logo-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+/* 文字毎のアップインアニメーション */
+.char-anim span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: charUpIn 0.8s ease forwards;
+}
+
+@keyframes charUpIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 文字ごとの遅延設定（30文字まで対応） */
+.char-anim span:nth-child(1) {
+    animation-delay: 0.10s;
+}
+
+.char-anim span:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+.char-anim span:nth-child(3) {
+    animation-delay: 0.20s;
+}
+
+.char-anim span:nth-child(4) {
+    animation-delay: 0.25s;
+}
+
+.char-anim span:nth-child(5) {
+    animation-delay: 0.30s;
+}
+
+.char-anim span:nth-child(6) {
+    animation-delay: 0.35s;
+}
+
+.char-anim span:nth-child(7) {
+    animation-delay: 0.40s;
+}
+
+.char-anim span:nth-child(8) {
+    animation-delay: 0.45s;
+}
+
+.char-anim span:nth-child(9) {
+    animation-delay: 0.50s;
+}
+
+.char-anim span:nth-child(10) {
+    animation-delay: 0.55s;
+}
+
+.char-anim span:nth-child(11) {
+    animation-delay: 0.60s;
+}
+
+.char-anim span:nth-child(12) {
+    animation-delay: 0.65s;
+}
+
+.char-anim span:nth-child(13) {
+    animation-delay: 0.70s;
+}
+
+.char-anim span:nth-child(14) {
+    animation-delay: 0.75s;
+}
+
+.char-anim span:nth-child(15) {
+    animation-delay: 0.80s;
+}
+
+.char-anim span:nth-child(16) {
+    animation-delay: 0.85s;
+}
+
+.char-anim span:nth-child(17) {
+    animation-delay: 0.90s;
+}
+
+.char-anim span:nth-child(18) {
+    animation-delay: 0.95s;
+}
+
+.char-anim span:nth-child(19) {
+    animation-delay: 1.00s;
+}
+
+.char-anim span:nth-child(20) {
+    animation-delay: 1.05s;
+}
+
+.char-anim span:nth-child(21) {
+    animation-delay: 1.10s;
+}
+
+.char-anim span:nth-child(22) {
+    animation-delay: 1.15s;
+}
+
+.char-anim span:nth-child(23) {
+    animation-delay: 1.20s;
+}
+
+.char-anim span:nth-child(24) {
+    animation-delay: 1.25s;
+}
+
+.char-anim span:nth-child(25) {
+    animation-delay: 1.30s;
+}
+
+.char-anim span:nth-child(26) {
+    animation-delay: 1.35s;
+}
+
+.char-anim span:nth-child(27) {
+    animation-delay: 1.40s;
+}
+
+.char-anim span:nth-child(28) {
+    animation-delay: 1.45s;
+}
+
+.char-anim span:nth-child(29) {
+    animation-delay: 1.50s;
+}
+
+.char-anim span:nth-child(30) {
+    animation-delay: 1.55s;
+}
+
+/* 説明文は1行目（タイトル）の後に開始させる（約1秒遅らせる） */
+.sub-copy span {
+    animation-delay: calc(1.0s + var(--delay, 0s));
+    /* ここでは簡易的に全体の遅延を加算 */
+}
+
+/* nth-childにさらに遅延を上乗せ */
+.sub-copy span:nth-child(1) {
+    animation-delay: 1.50s;
+}
+
+.sub-copy span:nth-child(2) {
+    animation-delay: 1.55s;
+}
+
+.sub-copy span:nth-child(3) {
+    animation-delay: 1.60s;
+}
+
+.sub-copy span:nth-child(4) {
+    animation-delay: 1.65s;
+}
+
+.sub-copy span:nth-child(5) {
+    animation-delay: 1.70s;
+}
+
+.sub-copy span:nth-child(6) {
+    animation-delay: 1.75s;
+}
+
+.sub-copy span:nth-child(7) {
+    animation-delay: 1.80s;
+}
+
+.sub-copy span:nth-child(8) {
+    animation-delay: 1.85s;
+}
+
+.sub-copy span:nth-child(9) {
+    animation-delay: 1.90s;
+}
+
+.sub-copy span:nth-child(10) {
+    animation-delay: 1.95s;
+}
+
+.sub-copy span:nth-child(11) {
+    animation-delay: 2.00s;
+}
+
+.sub-copy span:nth-child(12) {
+    animation-delay: 2.05s;
+}
+
+.sub-copy span:nth-child(13) {
+    animation-delay: 2.10s;
+}
+
+.sub-copy span:nth-child(14) {
+    animation-delay: 2.15s;
+}
+
+.sub-copy span:nth-child(15) {
+    animation-delay: 2.20s;
+}
+
+.sub-copy span:nth-child(16) {
+    animation-delay: 2.25s;
+}
+
+.sub-copy span:nth-child(17) {
+    animation-delay: 2.30s;
+}
+
+.sub-copy span:nth-child(18) {
+    animation-delay: 2.35s;
+}
+
+.sub-copy span:nth-child(19) {
+    animation-delay: 2.40s;
+}
+
+.sub-copy span:nth-child(20) {
+    animation-delay: 2.45s;
+}
+
+.sub-copy span:nth-child(21) {
+    animation-delay: 2.50s;
+}
+
+.sub-copy span:nth-child(22) {
+    animation-delay: 2.55s;
+}
+
+.sub-copy span:nth-child(23) {
+    animation-delay: 2.60s;
+}
+
+.sub-copy span:nth-child(24) {
+    animation-delay: 2.65s;
+}
+
+.sub-copy span:nth-child(25) {
+    animation-delay: 2.70s;
+}
+
+
+
+.logo-wrapper img {
+    position: relative;
+    z-index: 10;
+}

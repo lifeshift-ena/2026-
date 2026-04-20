@@ -1,0 +1,781 @@
+:root {
+    /* いとしろカレッジを意識した繊細なパレット */
+    --bg: #FDFCF8;
+    /* 非常に明るい、温かみのある白 */
+    --text-main: #333333;
+    /* 墨色。純粋な黒を避ける */
+    --text-sub: #777777;
+    --accent-green: #4A8B82;
+    /* 非常に明るい、透明感のある緑 */
+    --accent-clay: #A67C52;
+    /* 土や木材を思わせる柔らかなブラウン */
+    --border-thin: rgba(0, 0, 0, 0.06);
+    --border-dark: rgba(0, 0, 0, 0.2);
+
+    /* タイポグラフィ：緻密な使い分け */
+    --font-serif: "Noto Serif JP", "Yu Mincho", serif;
+    --font-sans: "Noto Sans JP", "Helvetica Neue", Arial, sans-serif;
+
+    /* 余白とリズム */
+    --section-gap: 120px;
+    --inner-gap: 40px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text-main);
+    font-family: var(--font-sans);
+    /* 本文は緻密なサンセリフ */
+    line-height: 1.8;
+    letter-spacing: 0.04em;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 緻密な線の表現 */
+.line-accent {
+    height: 1px;
+    background-color: var(--border-dark);
+    width: 60px;
+    margin: 20px 0;
+}
+
+/* 見出しのデザイン：いとしろ風 */
+.title-group {
+    margin-bottom: 60px;
+}
+
+.jp-title {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.serif-subtitle {
+    font-family: var(--font-serif);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+}
+
+.en-title {
+    font-size: 0.7rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--text-sub);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.jp-title {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* レイアウト：重なりと奥行き */
+.grid-wrap {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+section {
+    padding: var(--section-gap) 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* カードと情報の緻密な整理 */
+.content-box {
+    background: white;
+    padding: 40px;
+    border: 1px solid var(--border-thin);
+    position: relative;
+}
+
+/* いとしろ風のカリキュラム表示 */
+.step-item {
+    display: flex;
+    gap: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--border-thin);
+    margin-bottom: 30px;
+}
+
+.step-number {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    color: var(--accent-clay);
+    opacity: 0.6;
+}
+
+/* CTA: 誠実で静かな主張 */
+.cta-area {
+    background-color: var(--accent-green);
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.btn-itoshiro {
+    display: inline-block;
+    padding: 20px 60px;
+    border: 1px solid white;
+    color: white;
+    text-decoration: none;
+    font-family: var(--font-serif);
+    transition: all 0.4s ease;
+}
+
+.btn-itoshiro:hover {
+    background-color: white;
+    color: var(--accent-green);
+}
+
+/* 画像：キャプションとの絶妙な配置 */
+.img-frame {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    /* overflow: hidden を削除して、キャプションが枠外に正しく表示されるように調整 */
+}
+
+.img-placeholder {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+}
+
+.img-frame img {
+    border-radius: 20px;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.img-caption {
+    font-size: 0.75rem;
+    color: var(--text-sub);
+    margin-top: 15px;
+    text-align: center; /* 右寄せから中央揃えに変更 */
+}
+
+/* レスポンシブ */
+@media (max-width: 768px) {
+    .grid-wrap {
+        display: block;
+        padding: 0 20px;
+    }
+
+    .jp-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* Items Grid Layout */
+.items-grid {
+    gap: 60px 40px;
+}
+
+.items-grid .gain-card {
+    grid-column: span 4;
+}
+
+@media (max-width: 1024px) {
+    .items-grid .gain-card {
+        grid-column: span 6;
+    }
+}
+
+@media (max-width: 768px) {
+    .items-grid .gain-card {
+        grid-column: span 12;
+        margin-bottom: 40px;
+    }
+}
+
+.gain-card {
+    display: block;
+    width: 100%;
+}
+
+.gain-card .img-frame {
+    margin-bottom: 30px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.gain-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.gain-card .number {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    color: var(--accent-green);
+    opacity: 0.3;
+}
+
+/* Scroll Animation Styles */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ヒーローセクションの背景画像設定 */
+.hero-header {
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px 80px 20px;
+    background-color: #ffffff;
+}
+
+.hero-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.hero-logo-group {
+    position: absolute;
+    top: 38%;
+    /* さらにわずかに下げて、風景とテキストのバランスを最適化 */
+    left: 33%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    z-index: 10;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    opacity: 0;
+    animation: logoFadeIn 2.5s ease-out forwards;
+}
+
+@keyframes logoFadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -46%);
+        /* 少し下から浮き上がる演出 */
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+#hero-logo {
+    width: 260px;
+    height: auto;
+    margin-bottom: 8px;
+}
+
+.hero-subtext {
+    color: #444;
+    font-size: 0.95rem;
+    letter-spacing: 0.25em;
+    font-weight: 600;
+    margin: 0;
+    white-space: nowrap;
+}
+
+#hero-image {
+    width: 100%;
+    height: auto;
+    max-height: 85vh;
+    display: block;
+    object-fit: cover;
+    border-radius: 24px;
+}
+
+@media (max-width: 768px) {
+    .hero-header {
+        padding: 60px 20px;
+        min-height: auto;
+    }
+
+    .hero-container {
+        padding: 10px;
+    }
+
+    #hero-image {
+        max-height: 50vh;
+    }
+}
+
+/* Full Screen Visual Section */
+.full-screen-visual {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: #4a5d4e;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.full-screen-visual .bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: 0;
+}
+
+.full-screen-visual .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    /* 画像の上の暗幕 */
+    z-index: 1;
+}
+
+.full-screen-visual .visual-content {
+    position: relative;
+    z-index: 2;
+    text-align: left;
+    color: white;
+    width: 100%;
+}
+
+.visual-text-body {
+    max-width: 800px;
+}
+
+.visual-message {
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.visual-submessage {
+    font-size: 1.1rem;
+    letter-spacing: 0.1em;
+    opacity: 0.9;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .visual-message {
+        font-size: 1.8rem;
+    }
+
+    .visual-submessage {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .full-screen-visual {
+        height: auto;
+        padding: 80px 0;
+    }
+}
+
+/* ヒーローセクションの内容を前面に */
+header.hero-header .logo-wrapper,
+header.hero-header .grid-wrap,
+header.hero-header .title-group,
+header.hero-header p {
+    position: relative;
+    z-index: 10;
+    background-color: transparent !important;
+}
+
+/* カリキュラムレイアウト：横長・縦並び */
+.curriculum-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.curriculum-card {
+    background: #fff;
+    padding: 30px 40px;
+    border: 1px solid var(--border-thin);
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.curriculum-col-date {
+    flex: 0 0 20%;
+    display: flex;
+    flex-direction: column;
+}
+
+.curriculum-col-title {
+    flex: 0 0 25%;
+}
+
+.curriculum-col-list {
+    flex: 1;
+}
+
+.curriculum-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-green);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.curriculum-phase {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    color: var(--accent-green);
+    margin-bottom: 0.3rem;
+    font-weight: 700;
+    display: block;
+}
+
+.curriculum-title {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    margin-bottom: 0;
+    line-height: 1.4;
+    color: var(--text-main);
+}
+
+.curriculum-list {
+    list-style: none;
+    padding: 0;
+    font-size: 0.95rem;
+    color: var(--text-main);
+    margin-bottom: 0;
+}
+
+.curriculum-list li {
+    margin-bottom: 0.6rem;
+    position: relative;
+    padding-left: 16px;
+}
+
+.curriculum-list li:last-child {
+    margin-bottom: 0;
+}
+
+.curriculum-list li::before {
+    content: "·";
+    position: absolute;
+    left: 0;
+    color: var(--accent-green);
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 1;
+    top: -2px;
+}
+
+/* レスポンシブ (カリキュラム) */
+@media (max-width: 768px) {
+    .curriculum-grid {
+        padding: 0 20px;
+    }
+    .curriculum-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 25px 20px;
+    }
+    .curriculum-col-date,
+    .curriculum-col-title,
+    .curriculum-col-list {
+        flex: auto;
+        width: 100%;
+    }
+    .curriculum-col-title {
+        border-bottom: 1px solid var(--border-thin);
+        padding-bottom: 15px;
+    }
+}
+
+/* 講師セクション (Instructors inside Curriculum) */
+.instructor-section {
+    margin-top: 60px;
+}
+
+.instructor-section-title {
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    color: var(--text-main);
+}
+
+.instructor-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.instructor-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.instructor-image {
+    width: 240px;
+    height: 240px;
+    flex-shrink: 0;
+    border-radius: 0;
+    overflow: hidden;
+    border: 1px solid var(--border-thin);
+}
+
+.inst-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.instructor-info {
+    flex-grow: 1;
+}
+
+.instructor-role-text {
+    font-size: 0.8rem;
+    color: var(--accent-green);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.instructor-name {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    color: var(--text-main);
+}
+
+.instructor-desc {
+    font-size: 0.85rem;
+    color: var(--text-sub);
+    line-height: 1.6;
+    text-align: left;
+}
+
+@media (max-width: 1024px) {
+    .instructor-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 900px;
+    }
+}
+
+@media (max-width: 768px) {
+    .instructor-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .instructor-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* 主催者セクション (Organizers) */
+.organizer-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 60px;
+}
+
+.organizer-intro p {
+    font-size: 1.1rem;
+    line-height: 2;
+    color: var(--text-main);
+}
+
+.organizer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.organizer-card {
+    text-align: center;
+}
+
+.organizer-image {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    margin: 0 auto 20px auto;
+    background-color: #f0f0f0;
+    overflow: hidden;
+    border: 1px solid var(--border-thin);
+}
+
+.organizer-name {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: var(--text-main);
+}
+
+.organizer-role {
+    font-size: 0.8rem;
+    color: var(--accent-green);
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    font-weight: 700;
+    min-height: 45px;
+}
+
+.organizer-text {
+    font-size: 0.85rem;
+    color: var(--text-sub);
+    line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+    .organizer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .organizer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Modal Styles for Full Image Display */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-overlay.active .modal-content {
+    transform: translateY(0);
+}
+
+.modal-image {
+    max-width: 100%;
+    max-height: 90vh;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    border-radius: 4px;
+    display: block;
+}
+
+.modal-close {
+    position: absolute;
+    top: -40px;
+    right: 0px;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    line-height: 1;
+}
+
+.modal-close:hover {
+    color: var(--accent-green);
+}
+
+.footer-with-bg {
+    padding: 60px 0 40px 0;
+    position: relative;
+    border-top: 1px solid var(--border-thin);
+}
+
+@media (max-width: 768px) {
+    .footer-with-bg {
+        padding: 40px 0 30px 0;
+    }
+}
+
+/* New Curriculum Styles */
+.curriculum-date { font-size: 0.85rem; font-weight: bold; color: var(--accent-green); margin-bottom: 0.5rem; display: block; }
+.curriculum-location { font-size: 0.75rem; color: var(--text-sub); border-top: 1px solid var(--border-thin); padding-top: 10px; margin-top: 10px; margin-bottom: 10px; }
+.curriculum-location span { font-weight: bold; color: var(--accent-clay); margin-right: 4px; }
